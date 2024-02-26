@@ -5,17 +5,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            padding: 7px;
+        }
+
+        form {
+            display: flex;
+            margin-inline: auto;
+            padding: 40px;
+            flex-direction: column;
+            max-width: 400px;
+            align-items: center;
+        }
+    </style>
 </head>
 
 <body>
-    <main style="display: flex; justify-content: center;">
-        <form style="display: flex; flex-direction: column; max-width: 400px; align-items: center;">
+    <main>
+        <form>
             <input type="text" name="" id="petName" placeholder="Pet name">
             <input type="text" id="petOwner" placeholder="Pet owner">
             <input type="text" id="species" placeholder="Species">
             <input type="text" name="breed" id="breed" placeholder="Breed">
             <button type="submit">Invia</button>
         </form>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Pet Name</td>
+                        <td>Pet Owner</td>
+                        <td>Species</td>
+                        <td>Breed</td>
+                    </tr>
+                </thead>
+                <tbody id="table">
+
+                </tbody>
+            </table>
+        </div>
     </main>
 
 

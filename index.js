@@ -35,9 +35,13 @@ class Pet {
     this.species = _species;
     this.breed = _breed;
   }
+  static sameOwner(pet1, pet2) {
+    return pet1.petOwner === pet2.petOwner;
+  }
 }
 
 const pets = [];
+const table = document.getElementById("table");
 
 formInput.onsubmit = function (e) {
   e.preventDefault();
@@ -48,4 +52,11 @@ formInput.onsubmit = function (e) {
   species.value = "";
   breed.value = "";
   console.log(pets);
+  const tr = document.createElement("tr");
+  table.appendChild(tr);
+  Object.keys(pet).forEach((key) => {
+    const td = document.createElement("td");
+    td.innerText = pet[key];
+    tr.appendChild(td);
+  });
 };
